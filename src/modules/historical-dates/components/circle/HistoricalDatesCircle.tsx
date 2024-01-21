@@ -4,10 +4,11 @@ import type { Event } from "src/types/event";
 
 type Props = {
   events: Event[];
+  activeIndex: number
+  setActiveIndex: (arg: number) => void
 };
 
-const HistoricalDatesCircle = ({ events }: Props) => {
-  const [activeIndex, setActiveIndex] = React.useState(1);
+const HistoricalDatesCircle = ({ events, activeIndex, setActiveIndex }: Props) => {
   return (
     <div
       className="historical-dates-circle"

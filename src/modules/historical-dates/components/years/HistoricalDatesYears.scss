@@ -1,0 +1,21 @@
+
+.historical-dates-years{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 100px;
+    pointer-events: none;
+    z-index: -1;
+    &__item{
+        font-size: 200px;
+        font-weight: 700;
+        &:first-child{
+            color: #5D5FEF;
+        }
+        &:last-child{
+            color: #EF5DA8;
+        }
+    }
+}
