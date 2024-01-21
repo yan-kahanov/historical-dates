@@ -1,8 +1,9 @@
+import HistoricalDatesModule from "./modules/historical-dates/HistoricalDatesModule";
 
 function App() {
   return (
     <div className="App">
-      hello world!
+      <HistoricalDatesModule />
     </div>
   );
 }
