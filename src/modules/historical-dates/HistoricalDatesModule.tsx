@@ -1,7 +1,11 @@
 import React from "react";
-import {HistoricalDatesCircle, HistoricalDatesYears} from "./components";
+import {
+  HistoricalDatesCircle,
+  HistoricalDatesYears,
+  HistoricalDatesCounter,
+} from "./components";
 import "./HistoricalDatesModule.scss";
-import events from './events.json'
+import events from "./events.json";
 
 const HistoricalDatesModule = () => {
   const [activeIndex, setActiveIndex] = React.useState(1);
@@ -14,8 +18,17 @@ const HistoricalDatesModule = () => {
             Исторические
             <br /> даты
           </h2>
-          <HistoricalDatesCircle events={events} activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
-          <HistoricalDatesYears years={events[activeIndex-1].dates}/>
+          <HistoricalDatesCircle
+            events={events}
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+          />
+          <HistoricalDatesYears years={events[activeIndex - 1].dates} />
+          <HistoricalDatesCounter
+            activeIndex={activeIndex}
+            setActiveIndex={setActiveIndex}
+            eventsLength={events.length}
+          />
         </div>
       </div>
     </div>
