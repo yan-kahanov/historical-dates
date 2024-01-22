@@ -1,0 +1,98 @@
+.historical-dates-slider{
+    margin-inline: 80px;
+    animation: show 0.5s;
+    margin-top: 55px;
+    &.hidden{
+        opacity: 0;
+        animation: none;
+    }
+    &__wrap{
+        position: relative;
+    }
+    &__item{
+        height: initial;
+        &-year{
+            font-size: 25px;
+            color: #3877EE;
+        }
+        &-text{
+            font-size: 20px;
+            color: #42567A;
+            margin-top: 15px;
+        }
+    }
+    &__title{
+        display: none;
+    }
+    &__nav{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        background-color: white;
+        box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.10);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+        z-index: 2;
+        &:hover{
+            border: 1px solid rgb(56, 119, 238);
+        }
+        &:disabled{
+            opacity: 0;
+        }
+        &.prev{
+            left: 20px;
+        }
+        &.next{
+            right: 40px;
+        }
+        @keyframes show {
+            from {opacity: 0; transform: translateY(20px);}
+            to{opacity: 1; transform: translateY(0);}
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .historical-dates-slider{
+        position: relative;
+        margin-inline: 20px 0;
+        min-height: 250px;
+        padding: 60px 0 10px 0;
+        margin-top: 15px;
+        &::before{
+            position: absolute;
+            content: '';
+            top: 40px;
+            left: 0;
+            right: 20px;
+            height: 1px;
+            width: calc(100% - 20px);
+            background-color: #C7CDD9;
+        }
+        &__title{
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            font-size: 20px;
+        }
+        &__item{
+            &-year{
+                font-size: 16px;
+            }
+            &-text{
+                font-size: 14px;
+            }
+        }
+        &__nav{
+            display: none;
+        }
+    }
+}

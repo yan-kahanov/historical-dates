@@ -19,3 +19,31 @@
         }
     }
 }
+
+@media screen and (max-width: 1100px){
+    .historical-dates-years{
+        gap: 45px;
+        &__item{
+            font-size: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 820px){
+    .historical-dates-years{
+        gap: 35px;
+        &__item{
+            font-size: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    .historical-dates-years{
+        gap: 25px;
+        top: 220px;
+        &__item{
+            font-size: 56px;
+        }
+    }
+}

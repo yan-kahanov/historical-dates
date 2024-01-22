@@ -3,6 +3,7 @@ import {
   HistoricalDatesCircle,
   HistoricalDatesYears,
   HistoricalDatesCounter,
+  HistoricalDatesSlider,
 } from "./components";
 import "./HistoricalDatesModule.scss";
 import events from "./events.json";
@@ -28,6 +29,10 @@ const HistoricalDatesModule = () => {
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
             eventsLength={events.length}
+          />
+          <HistoricalDatesSlider
+            events={events[activeIndex - 1].events}
+            title={events[activeIndex - 1].title}
           />
         </div>
       </div>

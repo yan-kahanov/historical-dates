@@ -1,5 +1,7 @@
 .historical-dates-counter{
+    position: relative;
     margin-inline-start: 80px;
+    z-index: 3;
     &__item{
         color: #42567A;
         font-size: 14px;
@@ -27,6 +29,45 @@
         &:disabled{
             pointer-events: none;
             opacity: 0.5;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .historical-dates-counter{
+        position: absolute;
+        margin-inline-start: unset;
+        bottom: 10px;
+        left: 20px;
+        z-index: 2;
+        width: 100%;
+        &__pagination{
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            &-dot{
+                width: 6px;
+                height: 6px;
+                background-color: rgb(var(--black-blue));
+                border-radius: 100%;
+                opacity: 0.4;
+                &.active{
+                    opacity: 1;
+                }
+            }
+        }
+        &__buttons{
+            gap: 8px;
+        }
+        &__button{
+            height: 25px;
+            width: 25px;
+            svg{
+                transform: scale(0.7);
+            }
         }
     }
 }
