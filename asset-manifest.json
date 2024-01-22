@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/historical-dates/static/css/main.0cdd47c5.css",
+    "main.js": "/historical-dates/static/js/main.7446f00b.js",
+    "index.html": "/historical-dates/index.html",
+    "main.0cdd47c5.css.map": "/historical-dates/static/css/main.0cdd47c5.css.map",
+    "main.7446f00b.js.map": "/historical-dates/static/js/main.7446f00b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0cdd47c5.css",
+    "static/js/main.7446f00b.js"
+  ]
+}
